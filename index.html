@@ -1,0 +1,157 @@
+<!-- Sushil kumar kori -->
+<!-- Resume building Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+    
+    
+    <div class="container"  id="resume-form">
+        <h1 class="text-center my-3">Resume Builder</h1>
+        <p class="text-center">Create your Resume with few simple steps</p>
+
+        <!-- Starting of form -->
+        <div class="row">
+            <div class="col md-6">
+                <div class="form-group mt-2">
+                    <label for="nameField">Name</label>
+                    <input type="text" id = "nameField" placeholder="Enter your name" class="form-control">
+                </div>
+                
+                <div class="form-group mt-2">
+                    <label for="phonenumberField">Phone Number</label>
+                    <input type="text" id = "phonenumberField" placeholder="Enter phone number" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="emailField">Email ID</label>
+                    <input type="text" id = "emailField" placeholder="Enter Email ID" class="form-control">
+                </div>
+
+                
+                <div class="form-group mt-2">
+                    <label for="linkdinField">LinkedIn</label>
+                    <input type="text" id = "linkdinField" placeholder="LinkedIn URL" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="skillField">Skills</label>
+                    <input type="text" id = "skillField" placeholder="Enter skills" class="form-control">
+                </div>
+            </div>
+            <div class="col md-6">
+                <div class="form-group mt-2">
+                    <label for="objField">Objective</label>
+                    <textarea id="objField" placeholder="Enter Objective" class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-3" id="ac_new">
+                    <label for="academicField">Academic qualification</label>
+                    <textarea placeholder="Enter Academic qualification" class="form-control acfield"></textarea>
+                
+                    <div class="container text-center mt-2"  id="acbtn">
+                        <button onclick="addNewACField()" class="btn btn-primary btn-sm" >Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group" id="ex_new">
+                    <label for="workField">Work experience</label>
+                    <textarea placeholder="Enter Work experience" class="form-control wxfield"></textarea>
+                
+                    <div class="container text-center mt-2" id="exbtn">
+                        <button onclick="addNewEXField()" class="btn btn-primary btn-sm" >Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group" id="pro_new">
+                    <label for="">Projects</label>
+                    <textarea placeholder="Enter Projects" class="form-control profield"></textarea>
+                
+                    <div class="container text-center mt-2" id="probtn">
+                        <button onclick="addNewPROField()" class="btn btn-primary btn-sm" >Add</button>
+                    </div>
+                </div>
+
+            </div>  
+
+            
+        </div>
+        <div class="container text-center mt-3">
+            <button class="btn btn-primary btn-lg" onclick="getResume()">Generate Resume</button>
+        </div>
+    </div>
+
+    <!-- resume template -->
+    <div class="container" id="resume-template">
+            <h1 id="namet" class="text-center">Name</h1>
+        
+            <div class="row mt-3">
+                <div class="col md-4">
+                    <h5 id="phonet" class="text-center">Name</h5>
+                </div>
+                <div class="col md-4">
+                    <h5 id="emailt" class="text-center">email</h5>
+                </div>
+                <div class="col md-4">
+                    <a href="" class="text-center" id="linkedint">LinkedINt</a>
+                </div>
+            </div>
+            <dic class="card">
+                <div class="card-body">
+                    <h3 class="text-center mb-2">Objective</h3>
+                    <p id="objt"></p>
+                </div>
+            </dic>
+
+            <dic class="card">
+                <div class="card-body">
+                    <h3 class="text-center mb-2">Skills</h3>
+                    <p id="skillt"></p>
+                </div>
+            </dic>
+            
+            <dic class="card">
+                <div class="card-body">
+                    <h3 class="text-center mb-2">Projects</h3>
+                    <ul id="prot">
+                        <li></li>
+                    </ul>
+                </div>
+            </dic>
+
+            <dic class="card">
+                <div class="card-body">
+                    <h3 class="text-center mb-2">Work experience</h3>
+                    <ul id="wet">
+                        <li></li>
+                    </ul>
+                </div>
+            </dic>
+
+            <dic class="card">
+                <div class="card-body">
+                    <h3 class="text-center mb-2">Academic qualification</h3>
+                    <ul id="act">
+                        <li></li>
+                    </ul>
+                </div>
+            </dic>
+
+            <div class="container mt-3 text-center" id="lastbtn">
+                <button class="btn btn-primary btn-sm" onclick="resume_print()">Print Resume</button>
+            </div>
+
+
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="Script.js"></script>
+</body>
+</html>
