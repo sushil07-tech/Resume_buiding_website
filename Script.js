@@ -45,7 +45,18 @@ function getResume(){
     //phone number
     document.getElementById('phonet').innerHTML = document.getElementById('phonenumberField').value;
     document.getElementById('emailt').innerHTML = document.getElementById('emailField').value;
-    document.getElementById('linkedint').innerHTML = document.getElementById('linkdinField').value;
+    
+    
+    
+    let linkedin = document.getElementById('linkedint');
+    linkedin.setAttribute('href',document.getElementById('linkdinField').value)
+    
+
+    
+    
+    
+    
+    
     document.getElementById('objt').innerHTML = document.getElementById('objField').value;
     document.getElementById('skillt').innerHTML = document.getElementById('skillField').value;
 
